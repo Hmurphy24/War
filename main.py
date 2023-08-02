@@ -280,8 +280,8 @@ def gameplay_function(user_hand, computer_hand):
 
                     print('You ran out of cards!')
 
-                    print('The cards in your card pile will be put into your hand and shuffled a random amount of '
-                          'times.')
+                    print('The cards in your card pile will be put into your hand and shuffled a random amount '
+                          'of times.')
 
                     print()
 
