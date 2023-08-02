@@ -276,6 +276,68 @@ def gameplay_function(user_hand, computer_hand):
 
                 computer_hand.remove(computer_hand[0])
 
+                if len(user_hand) == 0:
+
+                    print('You ran out of cards!')
+
+                    print('The cards in your card pile will be put into your hand and shuffled a random amount of '
+                          'times.')
+
+                    print()
+
+                    for card in user_card_pile:
+
+                        user_hand.append(card)
+
+                    user_card_pile.clear()
+
+                    shuffle_number = random.randint(1, 10)
+
+                    print('Your new hand was shuffled {} time(s).'.format(shuffle_number))
+
+                    while shuffle_number > 0:
+
+                        random.shuffle(user_hand)
+
+                        shuffle_number -= 1
+
+                    print()
+
+                    # input('Press enter to continue: ')
+
+                    print()
+
+                if len(computer_hand) == 0:
+
+                    print('The computer ran out of cards!')
+
+                    print('The cards in the computer\'s card pile will be put into its hand and shuffled a random '
+                          'amount of times.')
+
+                    print()
+
+                    for card in computer_card_pile:
+
+                        computer_hand.append(card)
+
+                    computer_card_pile.clear()
+
+                    shuffle_number = random.randint(1, 10)
+
+                    print('The computer\'s new hand was shuffled {} time(s).'.format(shuffle_number))
+
+                    while shuffle_number > 0:
+
+                        random.shuffle(computer_hand)
+
+                        shuffle_number -= 1
+
+                    print()
+
+                    # input('Press enter to continue: ')
+
+                    print()
+
                 if len(user_hand) < 4 and len(computer_hand) < 4:
 
                     print('You and the computer do not have enough cards for a WAR!')
